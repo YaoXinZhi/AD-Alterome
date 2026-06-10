@@ -1,0 +1,36 @@
+We define "genetic alteration caused regulatory event" as defined below.
+A genetic alteration occurs in a specific gene, then the alteration further caused the regulation of a downstream biological process.
+There are three different regulatory types, neutral regulation (Reg), positive regulation (PosReg) and negative regulation (NegReg).
+Finally, event are formed as "gene -- genetic alteration -- trigger word (regulatory type) -- biological process"
+
+rules for extraction:
+1. Gene Identification: Identify the gene by its isolated name or symbol, excluding terms like "gene" or "mutated".
+2. Event Singularity: Each event must pertain to one gene and one biological process.
+3. Alteration Specification: Recognize genetic alterations as specific changes to the gene, such as SNPs, "mutant," or "knockdown."
+4. Regulatory Categorization: Classify trigger words into three types: neutral (e.g., "cause"), positive (e.g., "enhanced"), and negative (e.g., "reduced") regulation.
+5. Biological Process Isolation: Isolate the biological process as a single concept, omitting adjectives like "enhanced" or "different," which may not be the sentence's predicate.
+6. Trigger Word Conciseness: Retain only the most critical words as trigger words.
+7. Event Composition: Ensure that every event includes the four core elements: gene, genetic alteration, trigger word, and biological process.
+8. Sentence Inclusion: All elements of the event must be explicitly present within the sentence.
+9. Negation Indication: If negation is implied, annotate the regulatory type with "Negation" (e.g., "no association").
+9. Negation Indication: If negation is implied, annotate the regulatory type with "Negation" (e.g., "no association").
+10. Handling Incomplete Events: If a sentence lacks a complete event or if a genetic alteration doesn't regulate a biological process, return "None."
+11. Separating Multiple Events: For sentences with multiple regulatory events, list each event individually to accurately capture all instances of gene regulation and related biological processes.
+
+Please response me as the following format:
+sent-1:
+event-1: gene1 -- genetic alteration1 -- trigger word1 (regulatory type1) -- biological process1
+event-2: gene2 -- genetic alteration2 -- trigger word2 (regulatory type2) -- biological process2
+...
+
+Please extract the events from the following sentences.
+<<target_sent_replace_here>>
+
+Some example:
+sent-1: 24971511 Alu and LINE-1 hypomethylation is associated with HER2 enriched subtype of breast cancer.
+chain-1: Alu -- hypomethylation -- associated (Reg) -- HER2 enriched subtype of breast cancer
+chain-2: LINE-1 -- hypomethylation -- associated (Reg) -- HER2 enriched subtype of breast cancer
+
+sent-2: 22234886 Furthermore, knockdown of Nek2A in MCF-10DCIS.com could remarkably inhibit cell proliferation and induce cell cycle arrest in MCF-10DCIS.com cell line.
+chain-1: Nek2A -- knockdown -- inhibit (NegReg) -- cell proliferation
+chain-2: Nek2A -- knockdown -- induce (PosReg) -- cell cycle arrest

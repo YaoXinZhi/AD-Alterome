@@ -1,0 +1,33 @@
+We define "genetic alteration caused regulatory event" as defined below.
+A genetic alteration occurs in a specific gene, then the alteration further caused the regulation of a downstream biological process.
+There are three different regulatory types, neutral regulation (Reg), positive regulation (PosReg) and negative regulation (NegReg).
+Finally, event are formed as "gene -- genetic alteration -- trigger word (regulatory type) -- biological process"
+
+rules for extraction:
+1. The gene in the event should be isolated gene name or symbol, not containing other words, like "gene", "mutated".
+2. One event should contain only single gene and single biological process.
+3. The genetic alteration in event should be the change of the gene, like SNPs, or general alteration, e.g. "mutant", "knockdown"".
+4. The trigger words in the event should be divided into three regulatory types, e.g. "cause" is neutral regulation, "enhanced" is positive regulation, and "reduced" is negative regulation.
+5. The biological process in the event should be isolated concept, not containing other adjective, like "enhanced" and "different", and it's not always the predicate in the sentence.
+6. Trigger words keep only the most important words.
+7. The event have to include 4 elements, gene, genetic alteration, trigger word and biological process.
+8. All elements in the event must be in the sentence.
+10. If the event describes negation, mark "Negation" in the regulatory type, e.g. "no association".
+
+Please response me as the following format:
+sent-1:
+event-1: gene1 -- genetic alteration1 -- trigger word1 (regulatory type1) -- biological process1
+event-2: gene2 -- genetic alteration2 -- trigger word2 (regulatory type2) -- biological process2
+...
+
+Please extract the events from the following sentences.
+<<target_sent_replace_here>>
+
+Some example:
+sent-1: 24971511 Alu and LINE-1 hypomethylation is associated with HER2 enriched subtype of breast cancer.
+chain-1: Alu -- hypomethylation -- associated (Reg) -- HER2 enriched subtype of breast cancer
+chain-2: LINE-1 -- hypomethylation -- associated (Reg) -- HER2 enriched subtype of breast cancer
+
+sent-2: 22234886 Furthermore, knockdown of Nek2A in MCF-10DCIS.com could remarkably inhibit cell proliferation and induce cell cycle arrest in MCF-10DCIS.com cell line.
+chain-1: Nek2A -- knockdown -- inhibit (NegReg) -- cell proliferation
+chain-2: Nek2A -- knockdown -- induce (PosReg) -- cell cycle arrest

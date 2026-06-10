@@ -1,0 +1,36 @@
+We define a "genetic alteration-triggered regulatory event" as follows:
+- A specific gene undergoes a genetic alteration.
+- This alteration subsequently affects the regulation of a downstream biological process.
+- The regulation can be neutral (Reg), positive (PosReg), or negative (NegReg).
+- Events are formatted as "gene -- alteration -- trigger word (regulatory type) -- process".
+
+Extraction guidelines:
+1. Gene Identification: Recognize genes by their distinct names or symbols, excluding terms like "gene" or "mutated".
+2. Event Singularity: Each event must involve one gene and one biological process.
+3. Alteration Specification: Detect specific genetic changes such as SNPs, "mutant," or "knockdown."
+4. Regulatory Categorization: Categorize trigger words into three types: neutral (e.g., "associated"), positive (e.g., "enhanced"), and negative (e.g., "reduced").
+5. Biological Process Isolation: Identify the biological process as a distinct concept, excluding non-predicate adjectives.
+6. Trigger Word Conciseness: Focus on the most critical words as trigger words.
+7. Event Composition: Ensure each event comprises the four essential elements: gene, alteration, trigger word, and process.
+8. Sentence Inclusion: All components of the event must be present within the sentence.
+9. Negation Indication: If negation is implied, label the regulatory type with "Negation" (e.g., "no effect").
+10. Handling Incomplete Events: If a sentence does not contain a complete event or if an alteration does not regulate a process, return "None."
+11. Separating Multiple Events: For sentences with multiple events, list each event separately to accurately capture all gene regulation instances and related processes.
+
+Please provide the extracted events in the following format:
+sent-1:
+event-1: gene1 -- genetic alteration1 -- trigger word1 (regulatory type1) -- biological process1
+event-2: gene2 -- genetic alteration2 -- trigger word2 (regulatory type2) -- biological process2
+...
+
+Extract events from the provided sentences:
+<<target_sent_replace_here>>
+
+Example:
+sent-1: 24971511 Alu and LINE-1 hypomethylation is associated with HER2 enriched subtype of breast cancer.
+chain-1: Alu -- hypomethylation -- associated (Reg) -- HER2 enriched subtype of breast cancer
+chain-2: LINE-1 -- hypomethylation -- associated (Reg) -- HER2 enriched subtype of breast cancer
+
+sent-2: 22234886 Furthermore, knockdown of Nek2A in MCF-10DCIS.com could remarkably inhibit cell proliferation and induce cell cycle arrest in MCF-10DCIS.com cell line.
+chain-1: Nek2A -- knockdown -- inhibit (NegReg) -- cell proliferation
+chain-2: Nek2A -- knockdown -- induce (PosReg) -- cell cycle arrest

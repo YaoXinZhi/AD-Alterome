@@ -1,0 +1,5 @@
+.DS_Store
+chatgpt-result/
+**/chatgpt-result/
+*.tmp
+*.log
