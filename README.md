@@ -9,12 +9,11 @@ LLM-assisted hypothesis annotation experiment.
   refinement and model comparison.
 - `llm_hypothesis_annotation/prompts/`: prompt templates used for structured
   GARE/hypothesis annotation.
+- `llm_hypothesis_annotation/manual_review/`: manually reviewed annotation
+  check files with English filenames.
 - `llm_hypothesis_annotation/README.md`: methodological notes, model settings,
-  sampling rules, and generative AI use statement.
-
-Generated ChatGPT/LLM output files are intentionally excluded from this
-repository. The repository currently exposes only raw data, prompt templates,
-and documentation needed to reproduce or audit the annotation setup.
+  sampling rules, manual review notes, model access dates, and generative AI
+  use statement.
 
 ## Citation
 

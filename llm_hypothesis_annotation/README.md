@@ -9,8 +9,7 @@ LLM-assisted hypothesis annotation experiment.
   sentences.
 - `prompts/`: prompt templates used to ask LLMs for structured GARE/hypothesis
   annotation.
-
-The generated ChatGPT/LLM result files are not included.
+- `manual_review/`: manually reviewed annotation check files.
 
 ## Model Settings
 
@@ -25,23 +24,23 @@ Low-randomness decoding parameters were used to improve annotation consistency:
 - `top_p = 0.1`
 - `max_tokens = 2048`
 
-Comparison LLMs included GPT-4o, Kimi K2, Qwen 3.0, and Gemini 2.5. If a
-manuscript version needs provider-specific snapshots, add the exact platform
-access dates before submission.
+Comparison LLMs included GPT-4o, Kimi K2, Qwen 3.0, and Gemini 2.5.
+
+| Model/service | Access date |
+| --- | --- |
+| DeepSeek-V3-0324 / `deepseek-chat` | 2026-06-10 |
+| GPT-4o | 2026-06-10 |
+| Kimi K2 | 2026-06-10 |
+| Qwen 3.0 / Qwen3 | 2026-06-10 |
+| Gemini 2.5 | 2026-06-10 |
 
 ## Prompt Location
 
-Prompt templates are stored in `prompts/`. They were copied from the local
-working directory:
-
-`/Users/yao/Nutstore Files/Mac2PC/AD-PNRLE/AD-Alterome调整-2024/ChatGPT-experiment/prompt-dir`
+Prompt templates are stored in `prompts/`.
 
 ## Raw Data Location
 
-Raw data files are stored in `raw_data/`. They were copied from the local
-working directory:
-
-`/Users/yao/Nutstore Files/Mac2PC/AD-PNRLE/AD-Alterome调整-2024/ChatGPT-experiment/real-data`
+Raw data files are stored in `raw_data/`.
 
 ## Sampling and Manual Review
 
@@ -50,10 +49,10 @@ set were randomly sampled from AD-Alterome candidate sentences. Domain experts
 manually checked the sampled sentences and model annotations for AD relevance,
 molecular/mechanistic interpretation, and hypothesis alignment.
 
-Manual checking files are maintained separately in the project working
-directory:
+Manual review files are stored in `manual_review/`:
 
-`/Users/yao/Nutstore Files/Mac2PC/AD-PNRLE/AD-Alterome调整-2024/result/manual_check_result`
+- `ad_alterome_manual_review_fm.docx`
+- `ad_alterome_manual_review_yh.docx`
 
 ## Generative AI Use Statement
 
@@ -63,10 +62,3 @@ summaries. All LLM-generated annotations used in evaluation were manually
 reviewed by domain experts. The final biological interpretations,
 methodological descriptions, and manuscript claims were checked and edited by
 the authors.
-
-## Excluded Files
-
-The original local experiment directory also contains generated LLM output
-files under `chatgpt-result/`. These files are intentionally not included here
-to keep this repository focused on raw data, prompts, and reproducibility
-documentation.
