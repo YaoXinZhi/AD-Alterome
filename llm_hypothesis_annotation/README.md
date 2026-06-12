@@ -3,12 +3,20 @@
 This directory contains raw data and prompt templates for the AD-Alterome
 LLM-assisted hypothesis annotation experiment.
 
+The active annotation task is sentence-level AD hypothesis estimation, not
+direct event extraction. Given a literature-derived candidate sentence, the LLM
+evaluates AD relevance, molecular mechanism content, and alignment with
+predefined Alzheimer disease hypothesis classes.
+
 ## Directory Layout
 
 - `raw_data/`: raw sentence datasets sampled from AD-Alterome candidate
   sentences.
-- `prompts/`: prompt templates used to ask LLMs for structured GARE/hypothesis
-  annotation.
+- `prompts/hypothesis-annotation-prompt.v2.txt`: active prompt used to ask LLMs
+  for structured AD hypothesis annotation.
+- `prompts/base-prompt.v4.*.txt`: legacy direct event-extraction prompt drafts
+  retained for provenance; these are not the active hypothesis annotation
+  prompt.
 - `manual_review/`: manually reviewed annotation check files.
 
 ## Model Settings
@@ -36,7 +44,24 @@ Comparison LLMs included GPT-4o, Kimi K2, Qwen 3.0, and Gemini 2.5.
 
 ## Prompt Location
 
-Prompt templates are stored in `prompts/`.
+The active hypothesis annotation prompt is:
+
+- `prompts/hypothesis-annotation-prompt.v2.txt`
+
+It instructs the model to return, for each sentence:
+
+- AD relevance and explicitly mentioned non-AD disease names when present;
+- a definition/explanation of the sentence;
+- whether the sentence provides a molecular mechanism, with reasoning;
+- linked AD hypotheses selected primarily from the provided hypothesis list;
+- an extended explanation supporting the hypothesis assignment;
+- whether the judgment is based on the sentence, external resources, or both;
+- whether the judgment basis is gene-level, phenotype-level, or both.
+
+The prompt uses 11 predefined AD hypothesis classes plus `Not applicable to any
+AD hypothesis`: Cholinergic, Amyloid, Tau protein, Neuroinflammation, Oxidative
+stress, Metal ion, Glutamatergic excitotoxicity, Microbiota-Gut-Brain Axis,
+Abnormal autophagy, Mitochondrial autophagy, and Vascular hypotheses.
 
 ## Raw Data Location
 
