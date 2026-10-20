@@ -1,0 +1,32 @@
+{
+  "model": "deepseek-flash",
+  "temperature": 0,
+  "thinking": {
+    "type": "disabled"
+  },
+  "max_tokens_per_model_call": 2000,
+  "final_word_limit": 500,
+  "maximum_cumulative_completion_tokens": 4000,
+  "maximum_model_calls": 2,
+  "maximum_builder_calls": 1,
+  "total_time_limit_seconds": 480,
+  "single_model_timeout_seconds": 180,
+  "builder_timeout_seconds": 240,
+  "allowed_technical_retries_per_call": 1,
+  "skill_parameters": {
+    "candidate_limit": 500,
+    "organized_limit": 18,
+    "cache_disabled": true
+  },
+  "external_search": false,
+  "reference_answer_supplied": false,
+  "first_successful_response_policy": "Save first successful final API output verbatim; no editing, selection or quality retry.",
+  "maximum_model_calls_by_condition": {
+    "no_kb": 1,
+    "mcp": 1,
+    "skills": 2
+  },
+  "mcp_evidence_limit": 30,
+  "skills_source_commit": "79359ca5ee83fbac45e00199903c44b97c587d9c",
+  "model_version_note": "Recorded provider model identifier; not a date-pinned weights release."
+}

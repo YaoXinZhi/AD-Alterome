@@ -9,3 +9,12 @@ expert_review/**/ratings/
 expert_review/**/.env*
 expert_review/**/__pycache__/
 expert_review/**/*.py[cod]
+
+# Local experiment and MCP runtime artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+qa_evaluation/local_runs/
+mcp/local_runs/

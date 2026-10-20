@@ -1,0 +1,8 @@
+# Direct dependency versions validated for this publication on 20 October 2026.
+# This is not a complete historical environment lock.
+Django==4.2.16
+mcp==1.27.0
+openai==2.32.0
+httpx==0.28.1
+python-dotenv==1.2.2
+truststore==0.10.4

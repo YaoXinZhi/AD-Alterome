@@ -1,0 +1,16 @@
+{
+  "gene": {
+    "created_at": "2026-10-13T23:49:54.553341+00:00",
+    "completed_at": "2026-10-13T23:52:40.431486+00:00",
+    "scope": "Five-gene query-response snapshot, not a complete database snapshot",
+    "manifest_sha256": "fa8bf79b8f30ba1e59415b04da7a95738ad58f875b3abb4879cb7bca5608ae3d",
+    "response_count": 20
+  },
+  "phenotype_hypothesis": {
+    "created_at": "2026-10-14T01:46:20.153122+00:00",
+    "completed_at": "2026-10-14T01:51:58.379486+00:00",
+    "scope": "Ten term/hypothesis query-response snapshot, separate capture from the five-gene batch; not a complete database snapshot",
+    "manifest_sha256": "a5d0fc166d41507a73d3e9da2c7ca73a38be0ecbdc641fc332ca395189824389",
+    "response_count": 40
+  }
+}

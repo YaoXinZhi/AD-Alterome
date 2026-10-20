@@ -1,0 +1,13 @@
+Answer the following question about Alzheimer's disease (AD).
+
+Question:
+{QUESTION}
+
+Requirements:
+1. Answer in English and directly address the question, covering its essential aspects.
+2. Support key claims with traceable sources when available. Place citations next to the claims they support, using a PMID, DOI, or a stable database record identifier.
+3. Cite only sources you can reliably identify. Do not invent references or claim that a source supports findings it does not report. If a source cannot be reliably identified, state this limitation.
+4. Give a brief evidence-based explanation where interpretation is needed. Distinguish association from causation and human findings from cell or animal-model findings.
+5. Acknowledge relevant uncertainty, conflicting findings, or insufficient evidence. Keep the strength of the conclusion consistent with the evidence.
+6. Use only the information and tools permitted in this session. Do not perform external searches or open external source links.
+7. Keep the entire answer within 500 words, including references. Start with a direct answer, followed by concise supporting points and relevant limitations. Do not include tool logs or experimental-condition labels.

@@ -1,0 +1,38 @@
+[
+  {
+    "path": "mcp/server/mcp_server.py",
+    "source_sha256": "96a9444303511601d62035867024cbf8c069f2187b6a1a544a2b48e470dd5ec0",
+    "published_sha256": "b5d94e1cf7459df88128fab9e1404999f27ba74d6c96c3dfd0537b0862ad9f93",
+    "adaptation": "Remove personal author/date header only."
+  },
+  {
+    "path": "mcp/server/backend/api_client.py",
+    "source_sha256": "509f83757449dbe6c3d69b6cfaafc55e3fcd392754432f7947a178adb36c243b",
+    "published_sha256": "509f83757449dbe6c3d69b6cfaafc55e3fcd392754432f7947a178adb36c243b",
+    "adaptation": "Unchanged frozen source."
+  },
+  {
+    "path": "mcp/server/backend/config.py",
+    "source_sha256": "903b0fdb15587e5d82d09f402704afc429b56c3363278a178dfe3ecb4b76d368",
+    "published_sha256": "903b0fdb15587e5d82d09f402704afc429b56c3363278a178dfe3ecb4b76d368",
+    "adaptation": "Unchanged frozen source."
+  },
+  {
+    "path": "mcp/web_qa/mcp_client.py",
+    "source_sha256": "06313fc2f9059f8b9d5d3b5bb00316eda82062e7bd556ba5e4a8d28a448fb8bc",
+    "published_sha256": "06313fc2f9059f8b9d5d3b5bb00316eda82062e7bd556ba5e4a8d28a448fb8bc",
+    "adaptation": "Unchanged frozen source."
+  },
+  {
+    "path": "mcp/web_qa/mcp_qa_service.py",
+    "source_sha256": "e3533d4d5500ba2d656d72af55c77a55a8c85426b8a4833efa22d26331b61680",
+    "published_sha256": "1a97ebec8cc2cbbefbe99af9a892002ee246b55ea5ecf44079b92f0f1d38a78c",
+    "adaptation": "Remove personal author/date header only."
+  },
+  {
+    "path": "mcp/web_qa/codex_llm.py",
+    "source_sha256": "b042f0baef8a7af4e33f4fe0a9d80632aff1f56cb1e452a33075daf6e1741f6c",
+    "published_sha256": "b042f0baef8a7af4e33f4fe0a9d80632aff1f56cb1e452a33075daf6e1741f6c",
+    "adaptation": "Unchanged optional transport dependency; not used in the DeepSeek evaluation."
+  }
+]

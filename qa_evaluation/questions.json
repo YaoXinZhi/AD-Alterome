@@ -1,0 +1,122 @@
+[
+  {
+    "id": "G1",
+    "query": "APP",
+    "cn": "AD研究中，APP的分子改变与哪些表型相关？",
+    "en": "Which phenotypes are associated with molecular alterations of APP in AD studies?",
+    "kind": "gene",
+    "source_batch": "gene"
+  },
+  {
+    "id": "G2",
+    "query": "APOE",
+    "cn": "APOE相关的分子证据涉及哪些AD发病假说？",
+    "en": "Which hypotheses of AD pathogenesis are implicated by APOE-related molecular evidence?",
+    "kind": "gene",
+    "source_batch": "gene"
+  },
+  {
+    "id": "G3",
+    "query": "MAPT",
+    "cn": "AD研究中报道了哪些MAPT/Tau相关的分子病理改变？",
+    "en": "What MAPT/tau-related molecular pathological alterations have been reported in AD studies?",
+    "kind": "gene",
+    "source_batch": "gene"
+  },
+  {
+    "id": "G4",
+    "query": "PINK1",
+    "cn": "AD研究中，降低与增强PINK1表达或功能的病理效应有何差异？",
+    "en": "How do the pathological effects of reducing versus enhancing PINK1 expression or function differ in AD studies?",
+    "kind": "gene",
+    "source_batch": "gene"
+  },
+  {
+    "id": "G5",
+    "query": "PPARGC1A",
+    "cn": "PPARGC1A与线粒体异常关联的AD相关证据来自哪些实验模型？",
+    "en": "Which experimental models provide AD-related evidence linking PPARGC1A to mitochondrial abnormalities?",
+    "kind": "gene",
+    "source_batch": "gene"
+  },
+  {
+    "id": "P1",
+    "kind": "term",
+    "query": "mitochondrial dysfunction",
+    "cn": "AD研究中，哪些基因的改变与线粒体功能障碍相关？",
+    "en": "Alterations in which genes are associated with mitochondrial dysfunction in AD studies?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "P2",
+    "kind": "term",
+    "query": "oxidative stress",
+    "cn": "AD研究中，与氧化应激相关的分子改变有哪些类型？",
+    "en": "What types of molecular alterations are associated with oxidative stress in AD studies?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "P3",
+    "kind": "term",
+    "query": "synaptic transmission",
+    "cn": "AD研究中，突触传递异常涉及哪些分子病理过程？",
+    "en": "Which molecular pathological processes are implicated in abnormal synaptic transmission in AD studies?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "P4",
+    "kind": "term",
+    "query": "mitochondrial fission",
+    "cn": "线粒体分裂相关的分子证据涉及哪些AD发病假说？",
+    "en": "Which hypotheses of AD pathogenesis are linked to molecular evidence concerning mitochondrial fission?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "P5",
+    "kind": "term",
+    "query": "mitochondrial biogenesis",
+    "cn": "AD研究中，线粒体生物发生变化的证据是否一致？",
+    "en": "How consistent is the evidence on changes in mitochondrial biogenesis in AD studies?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "H1",
+    "kind": "hypothesis",
+    "query": "Amyloid Hypothesis",
+    "cn": "AD淀粉样蛋白假说涉及哪些代表性的基因改变—表型关系？",
+    "en": "What representative gene alteration–phenotype relationships are relevant to the amyloid hypothesis of AD?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "H2",
+    "kind": "hypothesis",
+    "query": "Tau Protein Hypothesis",
+    "cn": "AD的Tau蛋白假说涉及哪些病理表型？",
+    "en": "Which pathological phenotypes are implicated in the tau protein hypothesis of AD?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "H3",
+    "kind": "hypothesis",
+    "query": "Neuroinflammation Hypothesis",
+    "cn": "AD神经炎症假说涉及哪些有文献依据的免疫信号通路？",
+    "en": "Which immune signaling pathways have documented links to the neuroinflammation hypothesis of AD?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "H4",
+    "kind": "hypothesis",
+    "query": "Oxidative Stress Hypothesis",
+    "cn": "哪些分子证据将AD氧化应激假说与线粒体功能障碍联系起来？",
+    "en": "What molecular evidence links the oxidative stress hypothesis of AD to mitochondrial dysfunction?",
+    "source_batch": "remaining"
+  },
+  {
+    "id": "H5",
+    "kind": "hypothesis",
+    "query": "Mitochondrial Autophagy Hypothesis",
+    "cn": "现有分子改变—表型证据在多大程度上支持AD的线粒体自噬假说？",
+    "en": "To what extent does available molecular alteration–phenotype evidence support the mitochondrial autophagy hypothesis of AD?",
+    "source_batch": "remaining"
+  }
+]

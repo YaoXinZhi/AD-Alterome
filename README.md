@@ -4,6 +4,9 @@ This repository provides source materials for the AD-Alterome manuscript and the
 LLM-assisted AD hypothesis annotation experiment, together with bilingual
 expert-review interfaces for question-answering evaluation.
 
+Question-answering prompts, recorded generation settings, and MCP retrieval
+source are provided separately from the sentence-annotation materials.
+
 The sentence-annotation workflow is not direct event extraction. It starts from
 literature-derived AD-Alterome candidate sentences and asks an LLM to evaluate
 AD relevance, molecular-mechanism content, and links to predefined Alzheimer
@@ -16,6 +19,11 @@ disease hypotheses.
   cited evidence, and local saving/export instructions.
 - [`expert_review/en/docs/`](expert_review/en/docs/): unscored interface
   screenshots and an English supplementary figure caption.
+- [`qa_evaluation/`](qa_evaluation/): actual common and condition prompts,
+  15 bilingual questions, recorded generation settings, input provenance,
+  and portable request construction for the three-condition evaluation.
+- [`mcp/`](mcp/): MCP server, REST client, native QA retrieval source,
+  webpage prompts, and local setup instructions.
 - `llm_hypothesis_annotation/raw_data/`: raw sentence datasets used for prompt
   refinement and model comparison.
 - `llm_hypothesis_annotation/prompts/hypothesis-annotation-prompt.v2.txt`:
@@ -52,6 +60,24 @@ versions present the same underlying responses; they are alternative interfaces,
 not independent evaluation datasets. See the
 [review-system README](expert_review/README.md) for the rating protocol,
 storage modes, and screenshot assets.
+
+## QA Evaluation and Related Implementations
+
+The review interfaces contain 15 questions with three responses per question:
+no knowledge base, MCP QA, and revised Skills. Final responses use the same
+DeepSeek model identifier and common requirements, with external searches
+disabled. The current release combines the original MCP/no-knowledge-base
+answers with Skills v2 answers generated after workflow revision. Evidence
+budgets differ between workflows. See the [evaluation README](qa_evaluation/)
+for exact prompts, model settings, query-capture dates, and interpretation limits.
+
+The manuscript's earlier webpage demonstrations and extended MCP–Agent case
+have separate settings and must not be conflated with this later evaluation.
+
+The [Skills implementation](https://github.com/YaoXinZhi/adalterome-skills/tree/79359ca5ee83fbac45e00199903c44b97c587d9c)
+and [API documentation](https://github.com/YaoXinZhi/adalterome-skills/blob/79359ca5ee83fbac45e00199903c44b97c587d9c/skills/adalterome-api/references/api_docs.md)
+are maintained separately. This repository references them without duplicating
+the Skills package or REST server/database implementation.
 
 ## Active Annotation Task
 

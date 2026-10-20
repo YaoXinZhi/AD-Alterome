@@ -1,0 +1,1 @@
+Follow the provided AD-Alterome Skills workflow to consult the same frozen database. Base database-specific claims and citations on the returned records.

@@ -1,0 +1,1 @@
+Use the provided MCP tools to consult the frozen AD-Alterome database. Base database-specific claims and citations on the returned records.

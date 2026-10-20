@@ -5,6 +5,10 @@ question-answering responses. The English and Chinese versions contain the same
 **15 questions and 45 anonymous response pages**: five questions each about
 genes, phenotypes, and hypotheses, with three responses per question.
 
+The [evaluation materials](../qa_evaluation/) document the exact prompts,
+generation settings, input provenance, and Skills revision represented by these
+responses. The [MCP source](../mcp/) provides the corresponding retrieval code.
+
 | Version | Interface and materials | Start here |
 | --- | --- | --- |
 | English | English questions, responses, article metadata, excerpts, reference points, and scoring guide | [`en/README.md`](en/README.md) |
