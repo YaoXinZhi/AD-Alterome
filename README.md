@@ -75,9 +75,8 @@ The manuscript's earlier webpage demonstrations and extended MCP–Agent case
 have separate settings and must not be conflated with this later evaluation.
 
 The [Skills implementation](https://github.com/YaoXinZhi/adalterome-skills/tree/79359ca5ee83fbac45e00199903c44b97c587d9c)
-and [API documentation](https://github.com/YaoXinZhi/adalterome-skills/blob/79359ca5ee83fbac45e00199903c44b97c587d9c/skills/adalterome-api/references/api_docs.md)
-are maintained separately. This repository references them without duplicating
-the Skills package or REST server/database implementation.
+is maintained separately and referenced here without duplicating the package.
+The REST server and database implementation are not included in this release.
 
 ## Active Annotation Task
 

@@ -105,8 +105,8 @@ context or selectively repair one condition's outputs.
 - [MCP adapter and native QA retrieval source](../mcp/).
 - [Skills source pinned to the evaluated v2 commit](https://github.com/YaoXinZhi/adalterome-skills/tree/79359ca5ee83fbac45e00199903c44b97c587d9c),
   including the knowledge-synthesis instructions and builder.
-- [Separately maintained API documentation](https://github.com/YaoXinZhi/adalterome-skills/blob/79359ca5ee83fbac45e00199903c44b97c587d9c/skills/adalterome-api/references/api_docs.md).
-  The REST implementation and database are not copied into this repository.
+
+The REST implementation and database are not copied into this repository.
 
 The manuscript's earlier MCP webpage examples and extended MCP–Agent
 mitochondrial case are distinct from this later 15-question evaluation. Those

@@ -47,9 +47,7 @@ python mcp/server/mcp_server.py
 Set `ADALTEROME_API_BASE_URL` to the base of an available AD-Alterome REST
 deployment, including its proxy prefix if applicable. It must expose the
 documented gene, term, hypothesis, and curation endpoints. The localhost value
-above assumes a separately running API. See the
-[external API documentation](https://github.com/YaoXinZhi/adalterome-skills/blob/79359ca5ee83fbac45e00199903c44b97c587d9c/skills/adalterome-api/references/api_docs.md)
-for the service interface and published endpoint. No database files or service
+above assumes a separately running API. No database files or service
 credentials are distributed here. Server startup and evidence collection do not
 need a model API key. The adapter is intended for local use; binding it to a
 public interface requires deployment-specific access controls.
@@ -82,8 +80,6 @@ replay of the historical experiment.
 
 - [AD-Alterome Skills](https://github.com/YaoXinZhi/adalterome-skills/tree/79359ca5ee83fbac45e00199903c44b97c587d9c):
   evaluated knowledge-synthesis workflow and instructions.
-- [API documentation](https://github.com/YaoXinZhi/adalterome-skills/blob/79359ca5ee83fbac45e00199903c44b97c587d9c/skills/adalterome-api/references/api_docs.md):
-  separately maintained REST interface.
 
 Check syntax and prompt assembly without network access or a model key:
 
