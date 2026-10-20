@@ -1,0 +1,7 @@
+# Supplementary figure caption
+
+**Supplementary Fig. Sx | Evidence-linked interface for expert assessment of AD-Alterome question-answering responses.** The English review package presents 15 questions spanning genes, phenotypes, and hypotheses, with three anonymously labeled responses per question (45 response pages). The question appears above three independently scrolling panels: the original model response (left), cited article identifiers, titles, and available source excerpts (center), and the assessment form (right). Reviewers assign independent integer scores from 1 to 4 for factual and source accuracy, evidence support and traceability, and relevance and coverage. Optional notes, progress tracking, citation navigation, and pinnable scoring-guide and question-specific reference panels support review. With the bundled local server, changes are saved automatically to a reviewer-specific file and can be exported as JSON or CSV. Static hosting supports browser drafts and export. The screenshots show an unscored interface and do not display collected expert results.
+
+Suggested panel arrangement: **a**, `workspace.jpg`; **b**, `scoring-guide.jpg`; **c**, `reference-points.jpg`. Replace “Sx” with the final supplementary figure number.
+
+Source inclusion does not establish support for a claim. Method labels are withheld, but original response text and citations are retained. Reviewers may therefore infer a method from response content.

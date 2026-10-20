@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>AD-Alterome · 专家评阅</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23174c43'/%3E%3Cpath d='M17 47 29 16h6l12 31h-7l-3-9H27l-3 9zm12-15h6l-3-10z' fill='%23f4f3ed'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data/review-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">A<span>·</span></span><div><div class="eyebrow">EXPERT REVIEW WORKSPACE</div><h1>AD-Alterome <span>专家评阅</span></h1></div></div>
+      <form id="expert-form" class="expert-form"><label for="expert-id">评阅者</label><input id="expert-id" name="expert" value="E01" maxlength="40" autocomplete="off" spellcheck="false" pattern="[A-Za-z0-9_\-]{1,40}" aria-describedby="expert-hint"><button type="submit" class="header-button">切换</button><span id="expert-hint" class="sr-only">标识可用字母、数字、下划线和短横线；切换前会保存当前草稿。</span></form>
+      <div class="header-actions"><button id="export-json" class="header-button" type="button">导出 JSON</button><button id="export-csv" class="header-button" type="button">CSV</button><div class="progress-block"><span id="rated-progress">已评 0 / —</span><span id="page-progress">第 — / — 页</span><div class="progress-track"><span id="progress-fill"></span></div></div></div>
+    </header>
+    <div id="connection-banner" class="connection-banner" role="status" hidden></div>
+    <section class="question-area" aria-labelledby="question-en">
+      <div class="question-meta"><nav id="question-tabs" class="question-tabs" aria-label="题目导航"></nav><div class="answer-pages"><span>本题评阅页</span><nav id="answer-tabs" aria-label="本题回答导航"></nav></div></div>
+      <h2 id="question-en">正在载入评阅材料…</h2><p id="question-zh" class="question-zh"></p>
+    </section>
+    <main id="workbench" class="workbench" aria-busy="true">
+      <section class="panel answer-panel" aria-labelledby="answer-heading"><header class="panel-heading"><div><span class="section-number">01</span><h2 id="answer-heading">待评回答</h2></div><span class="panel-caption">英文原答 · 逐段中译</span></header><div id="answer-content" class="panel-body reading-body" tabindex="0"></div></section>
+      <section class="panel evidence-panel" aria-labelledby="evidence-heading"><header class="panel-heading"><div><span class="section-number">02</span><h2 id="evidence-heading">引用文献与原句</h2></div><span id="reference-count" class="panel-caption"></span></header><div id="evidence-content" class="panel-body evidence-body" tabindex="0"></div></section>
+      <section class="panel rating-panel" aria-labelledby="rating-heading"><header class="panel-heading"><div><span class="section-number">03</span><h2 id="rating-heading">独立评分</h2></div><button id="open-rules-inline" type="button" class="text-button">查看规则 ↗</button></header><div class="panel-body rating-body"><div id="save-status" class="save-status" role="status" aria-live="polite"><span class="status-dot"></span><span id="save-message">尚未评分</span><button id="retry-save" type="button" class="text-button" hidden>重试保存</button></div><div id="conflict-panel" class="conflict-panel" role="alert" hidden></div><form id="rating-form"><fieldset id="rating-fields"><legend class="sr-only">三维评分及评阅备注</legend><div id="score-fields"></div><div class="note-field"><label for="rating-note">评阅备注 <span id="note-requirement">选填</span></label><textarea id="rating-note" rows="3" maxlength="10000" placeholder="可记录错误片段、核对依据或评分理由…"></textarea><div class="note-bottom"><span id="completion-message">三维均未评。</span><span id="note-length">0 / 10000</span></div></div></fieldset></form><p class="rating-footnote">三维 1–4 分 · 滑条首次操作前不计分，备注选填。各维度独立判断。</p></div></section>
+    </main>
+    <footer class="app-footer"><div class="footer-left"><button id="open-points" class="button subtle" type="button" aria-controls="points-window" aria-expanded="false">参考得分点</button><div class="footer-context"><span id="current-page-id"></span><span id="footer-save-summary">评分自动保存</span></div></div><div class="footer-controls"><button id="open-rules" class="button subtle" type="button" aria-controls="rules-window" aria-expanded="false">评分规则</button><span class="footer-divider"></span><button id="previous-page" class="button" type="button">← 上一页</button><button id="next-page" class="button primary" type="button">下一页 →</button></div></footer>
+  </div>
+  <aside id="rules-window" class="rules-window" role="dialog" aria-modal="false" aria-labelledby="rules-title" hidden><header id="rules-drag-handle" class="rules-header"><div><span class="eyebrow">REVIEW GUIDE</span><h2 id="rules-title">三维评分规则</h2></div><div class="rules-actions"><button id="pin-rules" type="button" aria-pressed="true" title="固定后切页仍保持打开">已固定</button><button id="close-rules" type="button" class="close-button" aria-label="关闭评分规则">×</button></div></header><div id="rules-content" class="rules-content" tabindex="0"></div><footer>拖动标题栏可移动 · 固定后跨页保留</footer></aside>
+  <aside id="points-window" class="rules-window reference-points-window" role="dialog" aria-modal="false" aria-labelledby="points-title" hidden><header id="points-drag-handle" class="rules-header"><div><span class="eyebrow">REFERENCE POINTS</span><h2 id="points-title">参考得分点 <span id="points-question-id"></span></h2></div><div class="rules-actions"><button id="pin-points" type="button" aria-pressed="true" title="固定后切页仍保持打开，内容随题目更新">已固定</button><button id="close-points" type="button" class="close-button" aria-label="关闭参考得分点">×</button></div></header><div id="points-content" class="rules-content points-content" tabindex="0"></div><footer>拖动标题栏可移动 · 固定后跨页保留 · 内容随题目更新</footer></aside>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">请启用 JavaScript 后使用评阅工作台。</p></noscript>
+</body>
+</html>

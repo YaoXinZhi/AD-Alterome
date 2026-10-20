@@ -3,3 +3,9 @@ chatgpt-result/
 **/chatgpt-result/
 *.tmp
 *.log
+
+# Private review records and local runtime files
+expert_review/**/ratings/
+expert_review/**/.env*
+expert_review/**/__pycache__/
+expert_review/**/*.py[cod]

@@ -1,0 +1,16 @@
+# Local reviewer records and locks
+ratings/
+
+# Environment files and Python artifacts
+.env*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Operating-system artifacts
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
